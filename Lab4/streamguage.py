@@ -89,13 +89,18 @@ class StreamGuage:
 
 class NOAAStreamGuage(StreamGuage):
     units="m"
-    convert = False
-    
+
+    def convert(self):
+        pass
+    def read_guage_file(self):
+        super().read_guage_file()
+        print("I am a NOAA stream gauge")
+
 
 if __name__ == "__main__":
     start = ["2024-09-07 00:00", "2024-10-07 00:00"]
     for i, fid in enumerate(["phelan_creek_stream_guage_2024-09-07_to_2024-09-14.txt",
                 "phelan_creek_stream_guage_2024-10-07_to_2024-10-14.txt"]): 
-        StreamGuage(fid=fid, station_id="15478040", 
+       NOAAStreamGuage(fid=fid, station_id="15478040", 
                      station_name="PHELAN CREEK", 
                      starttime=start[i]).main()  
