@@ -207,3 +207,6 @@ marimo/_lsp/
 __marimo__/
 .DS_Store
 .gitignore
+Lab4/phelan_creek_stream_guage_2024-09-07_to_2024-09-14.txt
+Lab4/phelan_creek_stream_guage_2024-10-07_to_2024-10-14.txt
+.gitignore
