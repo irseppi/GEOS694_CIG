@@ -1,5 +1,5 @@
 import time
-
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -33,7 +33,7 @@ def main(xmin, xmax, ymin, ymax, sigma=1):
 
 if __name__ == "__main__":
     start = time.time()
-    main(-2, 2, -2, 2)
+    main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
     elapsed = time.time() - start
     print(f"Elapsed Time: {elapsed}s")
     plt.show()
